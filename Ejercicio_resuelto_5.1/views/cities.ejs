@@ -1,0 +1,24 @@
+<%- include('assets/header') %> 
+<%- include('assets/navbar') %> 
+<div class="container">
+    <div class="row text-center mx-auto w-50pxr text-white" style="height: 300px;  width: 60%;">
+        <h1 style="font-size: 60px; margin-top: 50px; ">Otras Ciudades</h1>
+        <p clas="margin-bottom: 50px;">Tenemos otras webs amigas. ¡Consúltalas!</p>
+    </div>
+    <div class="row">
+        <% for(var i=0; i < cities.length; i++) { %>
+        <div class="col">
+            <div class="card text-bg-dark" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title"><%= cities[i].title %></h5>
+                  <p class="card-text"><%= cities[i].description %></p>
+                  <b>Comentarios:</b>
+                  <p class="card-text"><%= cities[i].comment_number %></p>
+                  <a href="<%= cities[i].url %>" class="btn btn-primary">Visitar</a>
+                </div>
+            </div>
+        </div>     
+        <% } %>   
+    </div>
+</div>
+<%- include('assets/footer') %> 
